@@ -90,8 +90,16 @@ if score >= 90 {
 
 
 
+var day = "Sunday"
 
-
+switch day{
+case "Sunday":
+    print("Sunday")
+case "Monday":
+    print("Monday")
+default:
+    print("No day selected")
+}
 //print("Switch Case")
 //
 //
@@ -141,6 +149,38 @@ while count < 3 {
     count += 1
 }
 
+// Repeat
 repeat {
     print("Run at least once")
 } while count < 3
+
+
+//function
+
+func printName (printName:String){
+    print(printName)
+}
+
+printName(printName: "Abdul")
+
+
+// Function with return Values
+
+func Calculation (int: Int) -> Int {
+    return int+1
+    
+}
+
+print(Calculation(int: 10))
+
+
+// return multiple
+func minMax(numbers: [Int]) -> (min: Int, max: Int)? {
+    guard let min = numbers.min(), let max = numbers.max() else { return nil }
+    return (min, max)
+}
+
+if let result = minMax(numbers: [1, 5, 10]) {
+    print("Min: \(result.min), Max: \(result.max)")
+}
+
